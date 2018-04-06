@@ -1,0 +1,25 @@
+---
+- name: the account number "accountNr" exists
+  uid: e160a982-1556-404f-8975-339c89db4edd
+  parameters:
+  - name: accountNr
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: the account is assigned to the client "clientNr"
+  uid: b5351081-cd5f-4659-94a9-156b8e9ce4ac
+  parameters:
+  - name: clientNr
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: client withdraws "amount" from the account
+  uid: 4e9ee631-afad-4b5c-9be5-73ac79cdc142
+  parameters:
+  - name: amount
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: the account has "amount" balance
+  uid: 840bde9a-6484-4a02-9559-b3721160dadc
+  parameters:
+  - name: amount
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: transaction can't be completed
+  uid: beba19ad-f5e5-45f3-afca-82b1de48280e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
