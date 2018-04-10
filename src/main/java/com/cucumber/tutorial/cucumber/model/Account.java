@@ -1,9 +1,6 @@
 package com.cucumber.tutorial.cucumber.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -16,7 +13,7 @@ public class Account {
     @Column(name = "saving_account")
     private boolean savingAccount;
 
-    @ManyToMany(mappedBy = "accounts")
+    @ManyToMany(mappedBy = "accounts",fetch = FetchType.EAGER )
     private List<Client> clients;
 
     @Column(name="saldo")

@@ -10,7 +10,7 @@ public class Client {
     @Column(name="client_number")
     private String clientNumber;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "account_client",
             joinColumns = @JoinColumn(name = "client_nr"),
             inverseJoinColumns = @JoinColumn(name = "account_nr")

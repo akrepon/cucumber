@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@RestController("/accounts")
+@RestController
+@RequestMapping("/accounts")
 public class AccountController {
 
     @Autowired
@@ -19,8 +20,8 @@ public class AccountController {
     @Autowired
     private ClientRepo clientRepo;
 
-    @RequestMapping(value = "/{accountNr}/withdraw/{amount}", method = RequestMethod.POST)
-    public Long withdraw(@PathVariable String accountNr, @RequestHeader("clientNr") String clientNr, @PathVariable Long amount) throws ItemNotFoundException, OperationNotAllowedException {
+    @RequestMapping(value = "/{accountNr}/withdraw/{amount}", method = RequestMethod.PUT)
+    public Long withdraw(@PathVariable String accountNr, @PathVariable Long amount, @RequestHeader String clientNr) throws ItemNotFoundException, OperationNotAllowedException {
         Optional<Account> account = accountRepo.findById(accountNr);
         if (account.isPresent()) {
             if (account.get().getClients().stream()
@@ -44,5 +45,11 @@ public class AccountController {
             throw new ItemNotFoundException(accountNr);
         }
     }
+
+    @RequestMapping(value = "/{accountNr}", method = RequestMethod.GET)
+    public Account getAccount(@PathVariable String accountNr) {
+        return this.accountRepo.findById(accountNr).get();
+    }
+
 
 }

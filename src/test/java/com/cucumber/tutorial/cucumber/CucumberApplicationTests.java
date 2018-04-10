@@ -15,16 +15,8 @@ import org.springframework.test.context.transaction.TransactionalTestExecutionLi
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		glue = {"com.cucumber.tutorial.cucumber.steps"},
 		features = {"src/test/resources/features"}
 )
-@TestExecutionListeners({DependencyInjectionTestExecutionListener.class,
-		DirtiesContextTestExecutionListener.class,
-		TransactionalTestExecutionListener.class,
-		DbUnitTestExecutionListener.class})
-@DatabaseSetup("dataset.xml")
 public class CucumberApplicationTests {
-
-
 
 }

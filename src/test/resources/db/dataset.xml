@@ -1,0 +1,15 @@
+<dataset>
+    <ACCOUNT ACCOUNT_NUMBER="BE762789890"
+                SALDO="200"
+                SAVING_ACCOUNT="false"
+    />
+    <ACCOUNT ACCOUNT_NUMBER="BE762789880"
+             SALDO="90"
+             SAVING_ACCOUNT="false"
+    />
+    <CLIENT CLIENT_NUMBER="DHM555"/>
+    <ACCOUNT_CLIENT ACCOUNT_NR="BE762789890"
+                    CLIENT_NR="DHM555"/>
+    <ACCOUNT_CLIENT ACCOUNT_NR="BE762789880"
+                    CLIENT_NR="DHM555"/>
+</dataset>
