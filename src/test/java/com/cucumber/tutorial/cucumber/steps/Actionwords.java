@@ -21,4 +21,12 @@ public class Actionwords {
     public void transactionCantBeCompleted() {
 
     }
+
+    public void clientTransfersAmountToAccountAccountNr(String amount, String accountNr) {
+
+    }
+
+    public void theTransactionIsSuccessfull() {
+
+    }
 }

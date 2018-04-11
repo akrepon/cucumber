@@ -23,3 +23,13 @@
   uid: beba19ad-f5e5-45f3-afca-82b1de48280e
   parameters: []
   body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: client transfers "amount" to account  "accountNr"
+  uid: 8dba2cd2-1550-4b73-9ee8-8658b5e1d8d2
+  parameters:
+  - name: amount
+  - name: accountNr
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: the transaction is successfull
+  uid: 7f30fa56-ab48-40e6-bb62-ab95f4463e41
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
